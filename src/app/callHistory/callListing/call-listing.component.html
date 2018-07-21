@@ -1,0 +1,42 @@
+<div class="container-fluid mt-4">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      
+      <ul class="list-group numbers">
+        <li class="list-group-item active mb-3">
+          <input type="text" placeholder="search" (keyup)="SearchNumber($event)" class="form-control" />
+        </li>
+        <li *ngFor="let number of numbers" [ngClass]="{'active': number.number == selectedNumber}" (click) = "onChangeNumber(number.number)" class="list-group-item">{{number.number}}</li>
+      </ul>
+    </div>
+    <div class="col-sm-9">
+      <div class="table-responsive rules-grid mb-5">
+        <table datatable [dtOptions]="dtOptions"  class="row-border hover">
+          <thead>
+            <tr>
+              <th>Call From</th>
+              <th>Call To</th>
+              <th>Call Type</th>
+              <th>Bill hrsmin</th>
+              <th>Billmin</th>
+              <th>Start Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let history of callsListing">
+              <td>{{ history.call_from }}</td>
+              <td>{{ history.call_to }}</td>
+              <td>{{ history.call_type }}</td>
+              <td>{{ history.bill_hrsmin }}</td>
+              <td>{{ history.billmin }}</td>
+              <td>{{ history.start_time }}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        <div class = "no-record"  *ngIf="(callsListing && callsListing.length == 0) && !loading"> No record found for selected number</div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+
+.rules-grid {
+  .dataTables_length {
+    label{
+      select{
+        padding:8px;
+        margin:0px 5px;
+      }
+    }
+  }
+  .dataTables_filter{
+    label{
+      input{
+        padding:8px;
+        outline:none;
+        border:1px solid $silver-chalice;
+       
+      }
+    }
+    margin-bottom:10px;
+  }
+  table{
+   
+  &.dataTable{
+    width:100% !important;
+    margin-top:30px;
+    thead{
+      tr
+      th{
+        background:$supernova;
+        color:$white;
+        font-weight:600;
+        padding:12px 15px;
+        border-bottom:none;
+        border-right:1px solid $white;
+      } 
+    }
+    tbody{
+      tr{
+        td{
+          padding:12px 15px;
+          border:none;
+        }
+        &:nth-child(even) {background: $grey}
+        &:nth-child(odd) {background: $white}
+      }
+
+    }
+    &.no-footer {
+      border-bottom: 0px; 
+    }
+  }
+}
+.dataTables_info, .paging_full_numbers{
+  margin-top:20px;
+  a{
+    &.current{
+      background:$supernova !important;
+      color:$white !important;
+      border:none !important;
+      &:hover{
+        background:$supernova;
+        color:$white !important;
+      }
+    }
+    &.paginate_button {
+      color: $pale-sky;
+      background-color: $white;
+      border-color: $geyser;
+      &:hover{
+        background:$supernova !important;
+        color:$white !important;
+        border-color:$supernova;
+        transition: 0.2s;
+      }
+      &.disabled{
+        color: $pale-sky;
+        pointer-events: none;
+        cursor: auto;
+        background-color: $white;
+        border-color: $geyser;
+        background:none;
+      }
+    }
+  }
+  
+}
+
+.dataTables_empty {
+  display: none;
+}
+
+.dataTables_wrapper {
+  .dataTables_processing {
+    width: 100% !important;
+    height: 70% !important;
+    top:25%;
+  }
+}
+
+.no-record {
+  text-align: center
+}
+
+}
+
+.sidenav {
+  background: $ebony-clay;
+  padding: 0;
+  min-height: 700px;
+  cursor:pointer;
+  .numbers {
+    li {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      color:$white;
+      border-radius: 0;
+      &.active {
+        background: $supernova;
+        border-color: rgba(255, 255, 255, 0.125);
+      }
+      &:hover {
+        background: $supernova;
+        transition: 0.5s;
+      }
+    }
+  }
+ 
+}
+
+.navbar-dark {
+  .navbar-brand, .name {
+    color: $white !important;
+  }
+} 
+.w-32 {
+  width: 32px;
+}
+
+
+
