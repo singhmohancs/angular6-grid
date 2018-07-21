@@ -1,8 +1,0 @@
-{
-  "/api/*": {
-    "target": "https://brisol.ajrgroup.in/sm-q",
-    "secure": true,
-    "logLevel": "debug",
-    "changeOrigin": true
-  }
-}
