@@ -5,7 +5,7 @@ import { CallListing } from './callListing.model';
 
 
 @Component({
-  selector: 'app-call-listing',
+  selector: 'call-listing',
   templateUrl: './call-listing.component.html',
   styleUrls: ['./call-listing.component.scss']
 })

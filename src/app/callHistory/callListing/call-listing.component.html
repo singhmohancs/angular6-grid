@@ -1,7 +1,5 @@
-<div class="container-fluid mt-4">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      
+  <div class="row">
+    <div class="col app-sidebar">
       <ul class="list-group numbers">
         <li class="list-group-item active mb-3">
           <input type="text" placeholder="search" (keyup)="SearchNumber($event)" class="form-control" />
@@ -9,7 +7,7 @@
         <li *ngFor="let number of numbers" [ngClass]="{'active': number.number == selectedNumber}" (click) = "onChangeNumber(number.number)" class="list-group-item">{{number.number}}</li>
       </ul>
     </div>
-    <div class="col-sm-9">
+    <div class="col app-content">
       <div class="table-responsive rules-grid mb-5">
         <table datatable [dtOptions]="dtOptions"  class="row-border hover">
           <thead>
@@ -38,5 +36,4 @@
       </div>
     </div>
   </div>
-</div>
 
